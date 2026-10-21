@@ -133,6 +133,10 @@ input[type=text]:hover,input[type=tel]:hover{border-color:var(--color-ink-2)}
 /* подвал */
 footer{border-top:1px solid var(--color-line);padding:var(--space-lg) 0 var(--space-xl);color:var(--color-ink-2);font-size:.9rem}
 footer .wrap{display:grid;gap:.5rem}
+/* слой анимации: маска для слов заголовков */
+.m-w{display:inline-block;overflow:hidden;vertical-align:top;padding:0 .02em .14em;margin-bottom:-.14em}
+.m-w>i{display:inline-block;font-style:inherit;will-change:transform}
+@media(prefers-reduced-motion:reduce){.m-w,.m-w>i{overflow:visible}}
 @media(prefers-reduced-motion:reduce){*{transition-duration:.01ms!important;scroll-behavior:auto!important}}
 </style>
 </head>
@@ -273,6 +277,10 @@ footer .wrap{display:grid;gap:.5rem}
   </div>
 </footer>
 
+<script src="vendor/gsap.min.js" defer></script>
+<script src="vendor/ScrollTrigger.min.js" defer></script>
+<script src="vendor/lenis.min.js" defer></script>
+<script src="motion.js" defer></script>
 <script>
 (function(){
   var agree=document.getElementById('agree'),send=document.getElementById('send'),form=document.getElementById('form'),msg=document.getElementById('msg');
