@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#F6F1E9">
+<title>Массаж спины и шеи - демонстрационный макет</title>
+<meta name="description" content="Массажист: расслабляющий и лечебный массаж, запись на удобное время. Демонстрационный макет.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Onest:wght@400;500;600&display=swap&subset=cyrillic" rel="stylesheet">
+<style>
+/* Hallmark · macrostructure: Letter (одна колонка-обращение, без сетки карточек) · tone: soft, quiet · anchor hue: moss 140
+   Тема: свой набор (тёплая бумага, мох, глина как редкая точка). Шрифты: Cormorant Garamond (заголовки, roman) + Onest (текст), кириллица, OFL.
+   Pre-emit critique: P4 H4 E4 S4 R5 V4 */
+:root{
+  --color-paper:#F6F1E9;
+  --color-paper-2:#ECE4D6;
+  --color-ink:#2A2620;
+  --color-ink-2:#5C5448;
+  --color-line:#D8CDBB;
+  --color-accent:#4F6B4A;
+  --color-accent-ink:#3B5237;
+  --color-clay:#B8704F;
+  --color-stone-1:#CFC3AE;
+  --color-stone-2:#B9AC93;
+  --color-stone-3:#9C8F78;
+  --color-white:#FFFDF9;
+  --color-need:#8F7212;
+  --font-display:'Cormorant Garamond',Georgia,serif;
+  --font-body:'Onest',system-ui,-apple-system,'Segoe UI',Arial,sans-serif;
+  --space-xs:.5rem; --space-sm:1rem; --space-md:1.5rem; --space-lg:3rem; --space-xl:5.5rem;
+  --radius-pill:999px; --radius-sm:12px;
+  --ease-out:cubic-bezier(.2,.7,.2,1);
+  --edge:max(1.25rem,env(safe-area-inset-left),env(safe-area-inset-right));
+}
+*{box-sizing:border-box}
+html,body{overflow-x:clip}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--color-paper);color:var(--color-ink);font-family:var(--font-body);font-size:1.0625rem;line-height:1.65;
+  padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bottom)}
+svg{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:var(--font-display);font-weight:600;font-style:normal;line-height:1.05;margin:0;letter-spacing:-.005em;overflow-wrap:anywhere;min-width:0}
+p{margin:0}
+.wrap{max-width:1120px;margin:0 auto;padding-left:var(--edge);padding-right:var(--edge)}
+.narrow{max-width:46rem}
+:focus-visible{outline:3px solid var(--color-accent);outline-offset:3px;border-radius:4px}
+.need{color:var(--color-need);font-weight:500}
+.btn{display:inline-flex;align-items:center;justify-content:center;white-space:nowrap;min-height:48px;padding:.75rem 1.6rem;border-radius:var(--radius-pill);
+  font:600 1rem/1 var(--font-body);text-decoration:none;border:1.5px solid var(--color-accent-ink);cursor:pointer;
+  transition:background-color .2s var(--ease-out),color .2s var(--ease-out),border-color .2s var(--ease-out),opacity .2s var(--ease-out)}
+.btn-main{background:var(--color-accent-ink);color:var(--color-white)}
+.btn-main:hover{background:var(--color-ink);border-color:var(--color-ink)}
+.btn-line{background:transparent;color:var(--color-accent-ink)}
+.btn-line:hover{background:var(--color-accent-ink);color:var(--color-white)}
+.btn:disabled{opacity:.45;cursor:not-allowed}
+.btn:active:not(:disabled){transform:translateY(1px)}
+
+/* шапка */
+.top{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--color-paper) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--color-line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:64px}
+.brand{font:600 1.5rem/1 var(--font-display);text-decoration:none;white-space:nowrap}
+.nav{display:none;gap:1.75rem}
+.nav a{text-decoration:none;font-size:.95rem;color:var(--color-ink-2);white-space:nowrap}
+.nav a:hover{color:var(--color-accent)}
+@media(min-width:900px){.nav{display:flex}}
+.top .btn{min-height:44px;padding:.6rem 1.2rem;font-size:.95rem}
+@media(max-width:420px){.brand{font-size:1.25rem;white-space:normal;line-height:1.05}.top .btn{padding:.6rem .9rem;font-size:.9rem;flex:none}}
+
+/* первый экран */
+.hero{padding:var(--space-lg) 0 var(--space-xl)}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr);gap:clamp(1.5rem,5vw,4rem);align-items:center}
+.hero h1{font-size:clamp(2.9rem,6.4vw,5.4rem);font-weight:600}
+.hero .lead{margin-top:var(--space-md);max-width:34rem;color:var(--color-ink-2);font-size:1.15rem}
+.hero .cta{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:var(--space-lg)}
+.hero .facts{display:flex;flex-wrap:wrap;gap:.5rem 1.5rem;margin:var(--space-md) 0 0;padding:0;list-style:none;color:var(--color-ink-2);font-size:.95rem}
+.hero .facts li::before{content:"";display:inline-block;width:.45rem;height:.45rem;border-radius:50%;background:var(--color-clay);margin-right:.55rem;vertical-align:.1em}
+.cairn{justify-self:center;width:min(100%,300px);display:flex;flex-direction:column;align-items:center;gap:6px}
+.cairn span{display:block;border-radius:50%;box-shadow:inset 0 -10px 18px rgba(42,38,32,.12)}
+.cairn .s1{width:46%;aspect-ratio:2.3/1;background:var(--color-stone-3)}
+.cairn .s2{width:68%;aspect-ratio:2.1/1;background:var(--color-stone-2)}
+.cairn .s3{width:92%;aspect-ratio:1.9/1;background:var(--color-stone-1)}
+.cairn .s4{width:100%;aspect-ratio:3.2/1;background:var(--color-paper-2);box-shadow:none;border-radius:50%/60%;border:1.5px solid var(--color-line)}
+@media(max-width:760px){.hero .wrap{grid-template-columns:minmax(0,1fr)}.cairn{width:160px;justify-self:start}}
+
+/* секции */
+section{padding:var(--space-xl) 0;border-top:1px solid var(--color-line)}
+.sec-title{font-size:clamp(2rem,4.2vw,3.2rem);margin-bottom:var(--space-md)}
+.sec-lead{color:var(--color-ink-2);max-width:40rem;margin-bottom:var(--space-lg)}
+
+/* услуги - строки прайса */
+.rows{list-style:none;margin:0;padding:0;border-top:1.5px solid var(--color-ink)}
+.rows li{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:.25rem 1.5rem;padding:1.25rem 0;border-bottom:1px solid var(--color-line);align-items:baseline}
+.rows h3{font-size:1.65rem}
+.rows p{grid-column:1;color:var(--color-ink-2);font-size:1rem}
+.rows .price{grid-column:2;grid-row:1;white-space:nowrap}
+@media(max-width:560px){.rows li{grid-template-columns:minmax(0,1fr)}.rows .price{grid-column:1;grid-row:auto}}
+
+/* как проходит */
+.flow{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--space-lg)}
+.flow h3{font-size:1.5rem;margin-bottom:.5rem}
+.flow p{color:var(--color-ink-2)}
+.flow .mark{display:block;width:2.4rem;height:2.4rem;border-radius:50%;border:1.5px solid var(--color-clay);margin-bottom:var(--space-sm)}
+@media(max-width:760px){.flow{grid-template-columns:minmax(0,1fr);gap:var(--space-md)}}
+
+/* о мастере */
+.about{display:grid;grid-template-columns:minmax(0,.7fr) minmax(0,1.3fr);gap:clamp(1.5rem,5vw,4rem);align-items:start}
+.photo{aspect-ratio:4/5;background:var(--color-paper-2);border:1.5px dashed var(--color-stone-3);border-radius:var(--radius-sm);display:flex;align-items:center;justify-content:center;text-align:center;padding:var(--space-md)}
+.about p+p{margin-top:var(--space-sm)}
+@media(max-width:760px){.about{grid-template-columns:minmax(0,1fr)}.photo{max-width:260px}}
+
+/* сам правишь */
+.self{background:var(--color-paper-2)}
+.self ul{margin:var(--space-md) 0 0;padding-left:1.2rem;color:var(--color-ink-2)}
+.self li{margin-bottom:.4rem}
+
+/* запись */
+.book{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(1.5rem,5vw,4rem);align-items:start}
+@media(max-width:760px){.book{grid-template-columns:minmax(0,1fr)}}
+form{display:grid;gap:var(--space-sm)}
+label.f{display:grid;gap:.35rem;font-weight:500;font-size:.95rem}
+input[type=text],input[type=tel]{width:100%;min-height:48px;padding:.7rem .9rem;border:1.5px solid var(--color-stone-3);border-radius:var(--radius-sm);background:var(--color-white);font:400 1rem var(--font-body);color:var(--color-ink)}
+input[type=text]:hover,input[type=tel]:hover{border-color:var(--color-ink-2)}
+.consent{display:flex;gap:.7rem;align-items:flex-start;font-size:.9rem;color:var(--color-ink-2)}
+.consent input{width:22px;height:22px;margin-top:.15rem;accent-color:var(--color-accent-ink);flex:none}
+.msg{min-height:1.5rem;font-size:.95rem;color:var(--color-accent-ink)}
+.contacts{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:var(--space-md)}
+.contacts .btn{min-height:44px;padding:.6rem 1.1rem;font-size:.95rem}
+.hours{margin-top:var(--space-md);color:var(--color-ink-2)}
+
+/* подвал */
+footer{border-top:1px solid var(--color-line);padding:var(--space-lg) 0 var(--space-xl);color:var(--color-ink-2);font-size:.9rem}
+footer .wrap{display:grid;gap:.5rem}
+@media(prefers-reduced-motion:reduce){*{transition-duration:.01ms!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top">Массаж <span class="need">&lt;&lt;имя мастера&gt;&gt;</span></a>
+    <nav class="nav" aria-label="Разделы">
+      <a href="#uslugi">Услуги</a>
+      <a href="#seans">Как проходит</a>
+      <a href="#master">О мастере</a>
+      <a href="#zapis">Запись</a>
+    </nav>
+    <a class="btn btn-main" href="#zapis">Записаться</a>
+  </div>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <div class="wrap">
+      <div>
+        <h1>Массаж, после которого хочется выдохнуть</h1>
+        <p class="lead">Массажист в <span class="need">&lt;&lt;город&gt;&gt;</span>: расслабляющий массаж спины, шеи и всего тела для тех, кто устал от сидячей работы и постоянного напряжения. Запись на удобное время.</p>
+        <div class="cta">
+          <a class="btn btn-main" href="#zapis">Записаться на сеанс</a>
+          <a class="btn btn-line" href="#uslugi">Посмотреть услуги</a>
+        </div>
+        <ul class="facts">
+          <li>Приём по записи, без очередей</li>
+          <li>Давление подбираем под вас</li>
+          <li>Условия приёма: <span class="need">&lt;&lt;запросить у заказчика&gt;&gt;</span></li>
+        </ul>
+      </div>
+      <div class="cairn" aria-hidden="true">
+        <span class="s1"></span><span class="s2"></span><span class="s3"></span><span class="s4"></span>
+      </div>
+    </div>
+  </div>
+
+  <section id="uslugi">
+    <div class="wrap">
+      <h2 class="sec-title">Услуги и цены</h2>
+      <p class="sec-lead">Список и цены - как пример структуры. Реальные виды массажа, длительность и стоимость подставим из ваших данных.</p>
+      <ul class="rows">
+        <li>
+          <h3>Массаж спины и шеи</h3>
+          <span class="price need">&lt;&lt;цена&gt;&gt;</span>
+          <p>Снимает ощущение зажатости после рабочего дня. Длительность: <span class="need">&lt;&lt;минут&gt;&gt;</span>.</p>
+        </li>
+        <li>
+          <h3>Общий расслабляющий массаж</h3>
+          <span class="price need">&lt;&lt;цена&gt;&gt;</span>
+          <p>Спокойный сеанс на всё тело. Длительность: <span class="need">&lt;&lt;минут&gt;&gt;</span>.</p>
+        </li>
+        <li>
+          <h3>Лечебный массаж</h3>
+          <span class="price need">&lt;&lt;цена&gt;&gt;</span>
+          <p>Работа по назначению врача. Нужны ли у вас документы об образовании и лицензия, уточним: <span class="need">&lt;&lt;запросить у заказчика&gt;&gt;</span>.</p>
+        </li>
+        <li>
+          <h3>Абонемент на несколько сеансов</h3>
+          <span class="price need">&lt;&lt;цена&gt;&gt;</span>
+          <p>Если приходите регулярно. Условия: <span class="need">&lt;&lt;запросить у заказчика&gt;&gt;</span>.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="seans" aria-labelledby="seans-h">
+    <div class="wrap">
+      <h2 class="sec-title" id="seans-h">Как проходит сеанс</h2>
+      <div class="flow">
+        <div><span class="mark"></span><h3>Разговор</h3><p>Расскажете, что беспокоит и есть ли противопоказания. Мастер подберёт приёмы и силу нажима.</p></div>
+        <div><span class="mark"></span><h3>Сеанс</h3><p>Спокойная обстановка, без спешки. Если что-то неприятно, скажите сразу, и мастер изменит давление.</p></div>
+        <div><span class="mark"></span><h3>После</h3><p>Мастер подскажет, как закрепить результат дома и когда прийти снова. Без навязывания лишних сеансов.</p></div>
+      </div>
+      <p class="sec-lead" style="margin-top:var(--space-lg);margin-bottom:0">Массаж не заменяет лечение. При острых болях, температуре, заболеваниях кожи и сосудов сначала к врачу.</p>
+    </div>
+  </section>
+
+  <section id="master" aria-labelledby="master-h">
+    <div class="wrap about">
+      <div class="photo"><span class="need">&lt;&lt;фото мастера, запросить у заказчика&gt;&gt;</span></div>
+      <div class="narrow">
+        <h2 class="sec-title" id="master-h">О мастере</h2>
+        <p><span class="need">&lt;&lt;Имя, образование, курсы, опыт - запросить у заказчика&gt;&gt;</span></p>
+        <p>Сюда пойдёт короткий рассказ своими словами: чем вы занимаетесь, с какими запросами работаете чаще всего и чем ваш подход отличается. Выдуманный стаж и цифры мы не пишем, только то, что можно подтвердить.</p>
+        <p><span class="need">&lt;&lt;Дипломы и сертификаты - сфотографировать, добавим под текстом&gt;&gt;</span></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="self" aria-labelledby="self-h">
+    <div class="wrap narrow">
+      <h2 class="sec-title" id="self-h">Новости и фото - выкладываете сами</h2>
+      <p>Вы просили возможность самому публиковать информацию, как на странице ВКонтакте. Сайт собираем на Тильде: в ней есть редактор, где всё меняется мышкой, без программиста.</p>
+      <ul>
+        <li>заменить текст, цену или фото - за пару минут;</li>
+        <li>добавить новую запись в раздел «Новости» или «Акции»;</li>
+        <li>скрыть или удалить любой блок.</li>
+      </ul>
+      <p style="margin-top:var(--space-sm)">В стоимость войдёт короткая видеоинструкция, как это делать.</p>
+    </div>
+  </section>
+
+  <section id="zapis" aria-labelledby="zapis-h">
+    <div class="wrap book">
+      <div>
+        <h2 class="sec-title" id="zapis-h">Запишитесь на сеанс</h2>
+        <p class="sec-lead">Оставьте имя и телефон - перезвоним и подберём время. Или напишите в мессенджер.</p>
+        <div class="contacts">
+          <a class="btn btn-line" href="tel:+78888888888">+7 (888) 888-88-88</a>
+          <span class="btn btn-line need" aria-disabled="true">Telegram &lt;&lt;ссылка&gt;&gt;</span>
+          <span class="btn btn-line need" aria-disabled="true">MAX &lt;&lt;ссылка&gt;&gt;</span>
+          <span class="btn btn-line need" aria-disabled="true">ВКонтакте &lt;&lt;ссылка&gt;&gt;</span>
+        </div>
+        <p class="hours">Адрес: <span class="need">&lt;&lt;запросить у заказчика&gt;&gt;</span><br>Часы приёма: <span class="need">&lt;&lt;запросить у заказчика&gt;&gt;</span></p>
+      </div>
+      <form id="form" novalidate>
+        <label class="f">Ваше имя<input type="text" name="name" autocomplete="given-name" required></label>
+        <label class="f">Телефон<input type="tel" name="phone" autocomplete="tel" inputmode="tel" placeholder="+7" required></label>
+        <label class="consent">
+          <input type="checkbox" id="agree">
+          <span>Я даю согласие на обработку персональных данных и принимаю <a href="#" class="need" onclick="return false">политику обработки данных &lt;&lt;запросить у заказчика&gt;&gt;</a>.</span>
+        </label>
+        <button class="btn btn-main" id="send" type="submit" disabled>Записаться</button>
+        <p class="msg" id="msg" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>Демонстрационный макет, не является официальным сайтом организации. Данные вымышленные.</p>
+    <p>Оператор персональных данных и реквизиты: <span class="need">&lt;&lt;запросить у заказчика&gt;&gt;</span></p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var agree=document.getElementById('agree'),send=document.getElementById('send'),form=document.getElementById('form'),msg=document.getElementById('msg');
+  agree.addEventListener('change',function(){send.disabled=!agree.checked;});
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    if(!agree.checked){return;}
+    msg.textContent='Это демо: заявка никуда не отправляется. В готовом сайте она придёт вам на почту и в мессенджер.';
+  });
+})();
+</script>
+</body>
+</html>
